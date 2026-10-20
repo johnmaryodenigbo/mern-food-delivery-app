@@ -1,0 +1,7 @@
+const params = useParams(); // reads :id from the address, if any
+if (isNew) {
+ await fetch("/record", { method: "POST", body: JSON.stringify(person),  }); // Create
+} else {
+ await fetch(`/record/${params.id}`, { method: "PATCH", body: JSON.stringify(person), ... }); //
+Update
+}
